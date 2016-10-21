@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
+ *
+ * 自绘控件
  * Created by houtouke on 16/10/20.
  */
 public class CustomView extends View implements View.OnClickListener {

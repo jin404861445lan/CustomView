@@ -8,22 +8,24 @@ http://blog.csdn.net/guolin_blog/article/details/17357967#t0
 ![image](https://github.com/jin404861445lan/CustomView/blob/master/images/BAA9067EDBA6DCE142E38347D74047BC.jpg)
 
 代码：
-<pre><code>
-
+ 
+```
 public class CustomView extends View implements View.OnClickListener {
     private Paint mPaint;
     private Rect mBounds;
     private int mCount = 0;
 
-public CustomView(Context context, AttributeSet attrs) {
+
+    public CustomView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mBounds = new Rect();
         setOnClickListener(this);
     }
-    
-   @Override
-protected void onDraw(Canvas canvas) {
+
+
+    @Override
+    protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaint.setColor(Color.BLUE);
         canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
@@ -37,10 +39,11 @@ protected void onDraw(Canvas canvas) {
                 + textHeight / 2, mPaint);
     }
 
-   @Override
- public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
         mCount++;
         invalidate();//重绘
     }
 }
-</code></pre>
+
+```
